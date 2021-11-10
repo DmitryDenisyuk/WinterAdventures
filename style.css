@@ -1,0 +1,125 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+
+/* navigation bottom border */
+#main-nav {
+  border-bottom: #008ed6 3px solid;
+  opacity: 0.8;
+}
+
+.logo-svg {
+  width: 20px;
+}
+
+/* hidden block to keep other sections below video */
+header {
+  position: relative;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* full screen animated image */
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* div over the video to make it less bright */
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* text over animated image */
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* oval image in service area */
+.oval {
+  width: 500px;
+  height: 300px;
+  border-radius: 500px/300px;
+}
+
+#openweathermap-widget-15 {
+  display: none;
+}
+
+/* touch screen devices responsive  */
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black
+      no-repeat center center fixed;
+    background-size: cover;
+  }
+  header video {
+    display: none;
+  }
+
+  .oval {
+    width: 300px;
+    height: 200px;
+    border-radius: 300px/200px;
+  }
+}
+
+/* ipad pro reasoncive */
+@media screen and (max-width: 1024px) {
+  .oval {
+    width: 500px;
+    height: 300px;
+    border-radius: 500px/300px;
+  }
+  #openweathermap-widget-11 {
+    display: none;
+  }
+  #openweathermap-widget-15 {
+    display: block;
+  }
+}
+
+/* big screen phone responsive */
+@media screen and (max-width: 540px) {
+  .oval {
+    width: 300px;
+    height: 200px;
+    border-radius: 300px/200px;
+  }
+}
+
+/* small screen phone responsive */
+@media screen and (max-width: 290px) {
+  .oval {
+    width: 200px;
+    height: 100px;
+    border-radius: 200px/100px;
+  }
+}
+
+#map {
+  width: 95%;
+  height: 450px;
+  background: grey;
+}
+
+#panel {
+  width: 100%;
+  height: 400px;
+}
